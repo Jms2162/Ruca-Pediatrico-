@@ -1,0 +1,12 @@
+@mixin flex{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin wid ($width){
+    width: $width;
+}
+
+@mixin hei ($height){
+    height: $height;
+}

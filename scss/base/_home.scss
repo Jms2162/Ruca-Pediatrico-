@@ -1,0 +1,265 @@
+@import "../utilidades/lista-colores";
+@import "../utilidades/mixin";
+
+header{
+    background-color: nth($list-color, 1);
+    height: 280px;
+}
+
+/*Foto logo*/
+
+.img-logo{
+    @include wid (15rem); 
+}
+
+.div-centrar-logo{
+    @include flex;
+}
+
+
+
+
+header{
+    div{
+        nav{
+            ul{
+                @include flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                list-style: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: aliceblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*hasta aca tenes nesting ,import, y listas*/
+
+
+
+
+header{
+    div{
+        nav{
+            div{
+                div{
+                    ul{
+                        li{
+                            .hove:hover{
+                                background-color: nth($list-color, 2)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.titulos-principales{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+.div-main{
+    padding: 1.5rem;
+}
+
+/*foto para celular del consultorio*/
+.div-consultorio-celular{
+    @include flex;
+    margin-bottom: 40px;
+}
+
+
+#consultorio-celular{
+    @include wid (100%);
+}
+
+
+#consultorio-celular, .texto-descriptivo-consultorio{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,1fr);
+    gap: 20px;
+}
+
+
+.texto-descriptivo-consultorio{
+    @include hei (130px);
+    margin-bottom: 7rem;
+}
+
+main{
+    text-align: center;
+}
+
+.mapa{
+    @include wid (100%);
+}
+
+.body-menu{
+    background: linear-gradient(to right, white, $body-menu);
+}
+
+/*jannello.html*/
+
+.body-jannello{
+    background: linear-gradient(to right, white, $body-jannello);
+}
+
+.imagen-jannello{
+    @include wid (100%);
+    margin-bottom: 50px;
+}
+
+/*fernandez.html*/
+
+.body-fernandez{
+    background: linear-gradient(to right, white, #f7e372);
+}
+
+.imagen-fernandez{
+    @include wid (75%);
+    @include hei (23.5rem);
+}
+
+#perfil-profesional-fernandez{
+    margin-top: 3rem;
+}
+
+/*turnos.html*/
+
+.body-turnos{
+    background: linear-gradient(to right, white, $body-turnos);
+}
+
+.main-turnos{
+    @include hei (25rem);
+}
+
+.modifica-formulario{
+    height: 50px;
+    width: 190px;
+    margin-left: 5.5rem;
+}
+
+/*preguntasf.html*/
+
+.body-preguntas{
+    background: linear-gradient(to right, white, #b7dddb);
+}
+.main-preguntas{
+    text-align: left;
+    padding: 10px;
+    margin: 1rem;
+
+}
+
+.preguntas{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.respuesta-1{
+    margin-top: 5px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+
+.preguntas-respuestas{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.imagen-instagram{
+    margin-top: 1rem;
+}
+
+
+.whatsapp-icon{
+    width: 9%;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px){
+    
+    .menu{
+        @include flex;
+        display: inline;
+        margin-top: 2.5rem;
+
+    }
+
+
+    header div nav div div ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+
+    /*Menu Principal*/
+
+    .div-main{
+        padding: 3rem;
+    }
+
+    .texto-descriptivo-consultorio{
+        margin-top: 2rem;
+        font-weight: 300 bold;
+    }
+
+
+
+    /*jannello desktop*/
+    /*fernandez desktop*/
+    .imagen-fernandez{
+        height: 900px;
+        width: 45rem;
+    }
+    #perfil-profesional-fernandez{
+        margin-top: 2rem;
+    }
+
+
+    /*turnos desktop*/
+
+    .main-turnos{
+        height: 25rem;
+    }
+    .modifica-formulario{
+        margin-left: 41.5%;
+    }
+
+    /*Preguntas frecuentes desktop*/
+
+    .main-preguntas{
+        margin: 1rem;
+    }
+
+    /*footer desktop*/
+
+    .whatsapp-icon{
+        width: 2rem;
+    }
+
+   
+
+}
